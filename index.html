@@ -4,17 +4,13 @@
   <script src="./js/jquery-1.8.1.min.js"></script>
   <script>
     $(document).ready(function(){
-      $("#block").animate({
-        width: "70%",
-        opacity: 0.4,
-        marginLeft: "0.6in",
-        fontSize: "3em",
-        borderWidth: "10px"
-      }, 1500 );
+      $(".feedback_active").fadeOut('slow', function(){
+        $("#feedback_1").fadeIn().addClass('feedback_active');
+      }).removeClass('feedback_active');
     });
   </script>
 </head>
 <body>
-  <div id="block">Hello!</div>
+  <div id="feedback_1" class="feedback_active">Hello!</div>
 </body>
 </html>
